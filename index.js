@@ -42,9 +42,9 @@ class Airplane {
 
 class Person {
   constructor(attribute){
-    this.name = attribute.name,
-    this.age = attribute.age,
-    this.stomach = [],
+    this.name = attribute.name;
+    this.age = attribute.age;
+    this.stomach = [];
   }
   eat(edible){
     if(this.stomach < 10){
@@ -74,6 +74,11 @@ class Person {
 */
 
 class Car {
+  constructor(attribute){
+    this.model = attribute.model,
+    this.milesPerGallon = attribute.milesPerGallon,
+
+  }
 
 }
 
