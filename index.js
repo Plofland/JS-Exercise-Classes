@@ -144,11 +144,11 @@ class Instructor extends Lambdasian{
     this.favLanguage = param.favLanguage;
     this.catchPhrase = param.catchPhrase;
   }
-  demo(student){
-    return `Today we are learning about ${this.subject}`;
+  demo(subject){
+    return `Today we are learning about ${subject}`;
   }
   grade(student, subject){
-    return `${this.student.name} receives a perfect score on ${this.subject}`;
+    return `${student.name} receives a perfect score on ${subject}`;
   }
 }
 
@@ -180,10 +180,10 @@ class Student extends Lambdasian{
     return `${this.favSubjects}`;
   }
   PRAssignment(subject){
-    return `${this.student.name} has submitted a PR for ${this.subject}`;
+    return `${this.name} has submitted a PR for ${subject}`;
   }
-  sprintChallenge(){
-    return `${this.student.name} has begun sprint challenge on ${this.subject}`;
+  sprintChallenge(subject){
+    return `${this.name} has begun sprint challenge on ${subject}`;
   }
 }
 
@@ -206,11 +206,11 @@ class ProjectManager extends Instructor {
     this.gradClassName = attribute.gradClassName;
     this.favInstructor = attribute.favInstructor;
   }
-  standUp(){
-    return `${this.name} announces to ${this.channel}, @channel standy times!`;
+  standUp(channel){
+    return `${this.name} announces to ${channel}, @channel standy times!`;
   }
-  debugsCode(){
-    return `${this.name} debugs ${this.student.name}'s code on ${subject}`;
+  debugsCode(student, subject){
+    return `${this.name} debugs ${student.name}'s code on ${subject}`;
   }
 }
 
